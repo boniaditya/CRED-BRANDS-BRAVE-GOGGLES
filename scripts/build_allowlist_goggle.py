@@ -34,10 +34,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--goggle", type=Path, default=Path("goggles/my.goggle"))
     parser.add_argument("--domains-csv", type=Path, default=Path("data/allowed-sites.csv"))
     parser.add_argument("--source-url", default=DEFAULT_SOURCE_URL)
-    parser.add_argument("--name", default="Sheet Website Allowlist")
+    parser.add_argument("--name", default="CRED BRANDS")
     parser.add_argument(
         "--description",
-        default="Search only websites listed in the source Google Sheet first tab.",
+        default="Search only allowed websites in the CRED app.",
     )
     return parser.parse_args()
 
@@ -112,8 +112,8 @@ def goggle_text(
     domains = "\n".join(f"$boost,site={site.domain}" for site in sites)
     return f"""! name: {name}
 ! description: {description}
-! public: false
-! author: Me
+! public: true
+! author: Boni Aditya
 ! avatar: #2F6FED
 ! license: MIT
 
@@ -187,4 +187,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
