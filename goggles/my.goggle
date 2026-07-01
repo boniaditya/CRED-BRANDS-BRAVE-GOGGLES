@@ -1,7 +1,7 @@
-! name: Sheet Website Allowlist
-! description: Search only websites listed in the source Google Sheet first tab.
-! public: false
-! author: Me
+! name: CRED BRANDS
+! description: Search only allowed websites in the CRED app.
+! public: true
+! author: Boni Aditya
 ! avatar: #2F6FED
 ! license: MIT
 
